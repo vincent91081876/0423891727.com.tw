@@ -1,0 +1,21 @@
+意馨食品網站（已修正版面）
+
+問題原因：
+你用 HTTrack 複製時，主視覺輪播需要的 js/owl.carousel.min.js 沒有被抓下來。
+原始 CSS 會先把 .owl-carousel 設成 display:none，等 JS 加上 owl-loaded 才顯示。
+少了這個檔案，首頁大圖會整塊消失或三張圖直向堆疊。
+另外，HTTrack 把輪播初始化腳本放到 </html> 後面，產品區 Slick 輪播也常無法啟動。
+部分字型檔被存成 404 的 HTML，造成箭頭符號異常。
+
+這次修正：
+1. 補上 js/owl.carousel.min.js，並在首頁正確載入
+2. 把被放到 </html> 後面的 script 移回 </body> 內
+3. 修正離線字型／箭頭顯示
+4. 加上 css/offline-fix.css，即使直接開檔案也能維持版面
+
+建議開啟方式：
+- 最穩：在本資料夾開本機伺服器後瀏覽 index.html
+  例如：python -m http.server 8080
+  然後打開 http://127.0.0.1:8080/index.html
+- 也可以直接雙擊 index.html
+  若瀏覽器擋本機 JavaScript，大圖與產品輪播可能不會動，請改用本機伺服器。

@@ -1,0 +1,51 @@
+/* Offline / mirror layout fixes */
+.slick-prev:before,
+.slick-next:before {
+  font-family: Arial, "Noto Sans", sans-serif !important;
+  font-size: 28px !important;
+  line-height: 50px !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+.slick-prev:before { content: "\2039" !important; }
+.slick-next:before { content: "\203A" !important; }
+
+/* If JS has not initialized yet, show only the first banner slide */
+.owl-carousel:not(.owl-loaded) {
+  display: block;
+  overflow: hidden;
+}
+.owl-carousel:not(.owl-loaded) > .b-item:not(:first-child) {
+  display: none;
+}
+
+/* Keep initialized carousel visible */
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+/* If slick has not initialized, keep product cards in a 4-column row */
+.regular.slider:not(.slick-initialized) {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 0;
+}
+.regular.slider:not(.slick-initialized) > a {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .regular.slider:not(.slick-initialized) > a {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .regular.slider:not(.slick-initialized) > a {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

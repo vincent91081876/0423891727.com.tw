@@ -1,0 +1,168 @@
+body{
+	font-family: 微軟正黑體;
+	font-size: 16px;
+}
+.clr{
+	clear: both;
+}
+.icon_items{
+	position: relative;.
+}
+.nav_bg{
+	background-color: #ce3f6a;
+}
+.nav_logo{
+	padding: 10px 0;
+    text-align: left;
+    height: 65px;
+    float: left;
+}
+.nav_logo img{
+	height: 38px;
+}
+
+.nav_icon ul, .header_items ul, .nav_items ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.header_items ul a{
+	color: #fff;
+}
+.nav_icon ul{
+	margin: 10px 0px;
+}
+.nav_icon.icon_left{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.icon_txt {
+    position: absolute;
+    top: 34px;
+    left: -14px;
+    font-size: 14px;
+    width: 60px;
+    display: none;
+}
+
+.nav_icon.icon_right ul li {
+	float: left;
+    margin: 0 5px;
+    border: 1px solid #e6e6e6;
+    margin-left: -1px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+    transition: all .5s;
+}
+
+
+.nav_icon.icon_right ul .serch{
+	width: 180px;
+    border-radius: 3px;
+    text-align: right;
+    padding: 0 12px;
+    border: 1px solid #d5d5d6;
+
+}
+.nav_icon.icon_right ul li a, .nav_items ul li a{
+	color:#c1c1c1 !important;
+	display: block;
+	text-decoration: none;
+	transition: all .5s;
+}
+.nav_icon.icon_right ul li a, .nav_items ul li a.active{
+	color:#ce3f6a !important;
+}
+.nav_icon.icon_right{
+	float: right;
+}
+
+.line_img {
+    width: 150px;
+    height: 155px;
+    overflow: hidden;
+    position: relative;
+    left: -102px;
+    top: 7px;
+    border: 3px solid #ce3f6a;
+    /*opacity: 0;*/
+    transition: all .5s;
+    z-index: 9;
+    display: none;
+}
+.line_hover:hover .line_img {
+    /*opacity: 1 !important;*/
+    display: block;
+}
+.header_items ul li{
+	float: left;
+    width: 20%;
+    padding: 13px 0;
+    text-align: center;
+    margin-left: -1px;
+    border-right: 1px solid #eb749f;
+    transition: all .3s;    
+}
+.header_items ul li:nth-child(1){
+	border-left: 1px solid #eb749f;
+}
+
+.header_items ul li a{
+	color: #fff;
+    display: block;
+}
+.header_items ul li:hover{
+	background: #bd4468 ;
+}
+
+.header_items ul li a:hover{
+	text-decoration: none;
+}
+
+
+/*-------------側邊選單---------------*/
+.nav_items h4{
+	font-weight: bold;
+}
+.nav_items li{
+	padding: 5px 0;
+}
+
+.nav_title {
+	display: block;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.nav_title span{
+	float: right;
+}
+.sub_items {
+	display: none; 
+	padding: 10px;
+	color: #444;
+}
+
+.sub_items ul{
+	margin: 0;
+}
+.mobile{
+	display: none;
+}
+@media (max-width: 960px){
+.nav_items{
+	display: none;
+}
+.pc{
+	display: none;
+}
+.mobile{
+	display: block;
+}
+
+}
+

@@ -1,0 +1,77 @@
+.login{
+	background:#f5f5f5;
+	height:auto;
+	overflow:hidden;
+	display: table;
+	padding:8px 12px;
+	font-family:微軟正黑體;
+	position:relative;
+	border: 3px solid #FF9900;
+}
+.login a i{
+font-size: 30px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 40px;
+  height: 40px;
+  background: #fcfcfc;
+  color: #FF9900;
+  text-align: center;
+  line-height: 40px;
+}
+.login .left,.login .right{
+	width:320px;
+	padding:10px 15px;
+	box-sizing:border-box;
+}
+.login .surebox{
+	width:420px;
+	padding:10px 15px;
+	box-sizing:border-box;
+	text-align: justify;
+	text-justify:inter-ideograph;
+}
+.afcan .surebox{
+	text-align:center
+}
+.login li{
+	list-style-type:none;
+}
+.title1 {
+  font-weight: bold;
+  font-size: 13pt;
+  color: #333;
+  padding-bottom: 15px;
+  line-height: 1;
+}
+
+.login input {
+  width: 100%;
+  height:25px;
+  margin-bottom: 10px;
+}
+/*login*/
+.css_btn_class2 {
+	float:right;
+	font-size:10.5pt;
+	font-family:微軟正黑體;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #d6ac85;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	background:-ms-linear-gradient( top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ededed), color-stop(100%, #dfdfdf) );
+	background-color:#ededed;
+	color:#333;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}
