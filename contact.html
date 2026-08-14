@@ -27,8 +27,6 @@
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" type="text/css" href="css/login.css">
 	<script src="js/jquery-1.10.2.min.js"></script>
-  <script src="js/jquery.validate.js" type="text/javascript"></script>
-  <script src="js/additional-methods.js"></script>
 	</head>
 <body>
 		
@@ -172,7 +170,7 @@
           <div class="contact_list">
             <ul>
               <li><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-zxc6550094@gmail.com</li>
+<a href="mailto:zxc6550094@gmail.com?subject=%E6%84%8F%E9%A6%A8%E9%A3%9F%E5%93%81%E7%B6%B2%E7%AB%99%E8%A9%A2%E5%95%8F">zxc6550094@gmail.com</a></li>
               <li><span><i class="fa fa-phone"></i></span>04-2389-1727；0907-508-885 張先生</li>
               <li><span><i class="fa fa-fax"></i></span>
 04-2389-3869　</li>
@@ -182,46 +180,11 @@ zxc6550094@gmail.com</li>
 台中市南屯區益昌三街65號2樓</div>
       </div>
   		<div class="col-sm-8 col-md-8">
-        <form id="contact-form" action="https://www.0423891727.com.tw/getNew.html" method="POST" class="form-horizontal" role="form">
-  				<div class="form-group">
-   					<label for="inputCompanyName" class="col-sm-3 control-label">聯絡姓名</label>
-  					<div class="col-sm-9">
-  						<input name="name" type="text" class="form-control" id="inputCompanyName" placeholder="聯絡姓名" required />
-  					</div>
-  				</div>
-    				<div class="form-group">
-      				<label for="inputYourName" class="col-sm-3 control-label">電子信箱</label>
-      				<div class="col-sm-9">
-        					<input name="email" type="text" class="form-control" id="inputYourName" placeholder="請輸入電子信箱" required email='1' />
-      				</div>
-    				</div>
-    				<div class="form-group">
-      				<label for="inputKana" class="col-sm-3 control-label">聯絡電話</label>
-      				<div class="col-sm-9">
-        					<input name="tel" type="text" class="form-control" id="inputKana" placeholder="請輸入聯絡電話" required phoneInternation='1' />
-      				</div>
-    				</div>
-         		<div class="form-group">
-      				<label for="textareaMessage" class="col-sm-3 control-label">詢問內容</label>
-      				<div class="col-sm-9">
-        					<textarea name="message" class="form-control" rows="5" id="textareaMessage" placeholder="請輸入詢問內容" required></textarea>
-      				</div>
-    				</div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 control-label">驗 &nbsp 證&nbsp碼</label>
-              <div class="col-sm-9">
-                  <img height="40px" id="rand-img" align="absmiddle" src="imgcode.png" style="z-index:999;cursor:pointer;margin:0px 0px;" onclick="this.src='imgcode7249.png?update=' + Math.random()" alt="重新整理">
-                  <input name="code" id="code" type="text" class="form-control" size="30" required placeholder="驗證碼" />
-              </div>
-            </div>
-    				<div class="form-group">
-      				<div class="col-sm-12 text-center" style="margin-top: 10px; text-align: right;">
-                <input type="hidden" name="act" value="contact" />
-                <input type="hidden" name="formhash" value="03e22cb9" />
-        				<button type="submit" class="btn btn-post btn-lg" data-ua="lg">送 信</button>
-      				</div>
-    				</div>
-  			</form>
+        <div class="local-mail">
+          <h4>寫信給我們</h4>
+          <p>請點下方按鈕，開啟您電腦或手機的郵件程式，寄信到 <strong>zxc6550094@gmail.com</strong>。</p>
+          <a class="btn btn-post btn-lg" href="mailto:zxc6550094@gmail.com?subject=%E6%84%8F%E9%A6%A8%E9%A3%9F%E5%93%81%E7%B6%B2%E7%AB%99%E8%A9%A2%E5%95%8F">開啟郵件程式</a>
+        </div>
   		</div>
 	 </div>
 	</section>
@@ -271,71 +234,6 @@ zxc6550094@gmail.com</li>
       }
     });
 
-    $(function(){
-      
-      jQuery.validator.addMethod("phoneInternation", function (phone, element) {
-          phone = phone.replace(/\s+/g, "");
-          return this.optional(element) || phone.length > 9 && phone.match(/^((\+)?[1-9]{1,2})?([-\s\.])?((\(\d{1,4}\))|\d{1,4})(([-\s\.])?[0-9]{1,12}){1,2}(\s*(ext|x)\s*\.?:?\s*([0-9]+))?$/);
-      }, "請輸入正確的電話格式");
-      
-      $('#contact-form').validate({
-        submitHandler: function(form) {
-          
-          if (!$("#overLay").size()) {
-                $('<div id="overLay"></div>').prependTo($("body"));
-                $("#overLay").css({
-                    width: "100%",
-                    backgroundColor: "#000",
-                    opacity: 0.2,
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    zIndex: 1002
-                }).height($(document).height());
-
-                var _scrollTop = $(window).scrollTop()+($(window).height()/2);  
-            var afcancelTpl = '<div id="box" style="display: block; z-index: 9999; opacity:1.0; position: absolute; top:'+_scrollTop+'px; left:50%; margin-left: -200px; margin-top: -100px;">';
-            afcancelTpl += '<div class="login afcan">';
-            afcancelTpl += '  <div  class="surebox">';        
-            afcancelTpl += '    <li class="title1">提示訊息</li>';      
-            afcancelTpl += '        資料傳送中....<br>';
-            afcancelTpl += '  </div>';
-            afcancelTpl += '</div>';
-            afcancelTpl += '</div>';
-
-            //$(window).scrollTop(0);
-            $(afcancelTpl).prependTo($("body"));
-
-            }
-            
-          var time = setInterval(function() {
-            form.submit();
-            clearInterval(time);
-          }, 800);
-        },
-          rules: {
-          code: {
-            required: true,
-            minlength: 4,
-            remote: {
-              url: 'verifycode.php',
-              type: "post",
-              data: {
-                  code: function() {
-                    return $('#code').val();
-                  }
-              }
-            }
-          }
-        },
-        messages: {
-          code: {
-            remote: '請輸入正確的驗証碼'
-          } 
-        } 
-      });
-
-    })
   </script>
 	<hr>
 <footer class="ft_pc">

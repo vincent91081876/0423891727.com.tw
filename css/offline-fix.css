@@ -49,3 +49,27 @@
     max-width: 100%;
   }
 }
+
+/* Contact page: replace form with local mail action */
+.local-mail {
+  padding: 10px 8px 20px;
+}
+.local-mail h4 {
+  margin: 0 0 12px;
+  color: #ce3f6a;
+  font-weight: bold;
+}
+.local-mail p {
+  margin: 0 0 20px;
+  line-height: 1.8;
+  color: #444;
+}
+.local-mail .btn-post {
+  display: inline-block;
+  padding: 10px 28px;
+  text-decoration: none;
+}
+.contact_list a {
+  color: #333;
+  text-decoration: underline;
+}
